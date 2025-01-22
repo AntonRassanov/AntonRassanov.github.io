@@ -1,0 +1,197 @@
+/* Base styles */
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/* Typography */
+body {
+    font-family: 'Montserrat';
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 0;
+}
+
+h1 {
+    font-family: 'Fraunces';
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: .25em;
+}
+
+.product-new-price {
+    font-family: 'Fraunces';
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.product-add-to-cart {
+    font-family: 'Montserrat';
+    font-size: .875rem;
+    font-weight: 500;
+}
+
+/* Body and layout */
+body {
+    --primary-darkCyan: hsl(158, 36%, 37%);
+    --primary-cream: hsl(30, 38%, 92%);
+    --secondary-veryDarkBlue: hsl(212, 21%, 14%);
+    --secondary-darkGrayishBlue: hsl(228, 12%, 48%);
+    --secondary-white: hsl(0, 0%, 100%);
+    --seocndary-darkerCyan: hsl(158, 36%, 27%);
+    --borderRadiusS: 8px;
+    --borderRadiusM: 20px;
+    background-color: var( --primary-cream );
+    color: var( --secondary-darkGrayishBlue );
+    padding: 12.5em 1.143em;;
+}
+
+.product-card {
+    max-inline-size: 42.857em;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+    border-radius: var( --borderRadiusM );
+    background-color: var( --secondary-white );
+    overflow: hidden;
+}
+
+.product-featured-image {
+    inline-size: 100%;
+    max-inline-size: 50%;
+    block-size: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+}
+
+.product-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    gap: 1.429em 1.071em;
+    padding: 2.143em;
+}
+
+.product-category {
+    inline-size: 100%;
+}
+
+.product-title {
+    color: var( --secondary-veryDarkBlue );
+    inline-size: 100%;
+}
+
+.product-excerpt {
+    inline-size: 100%;
+    -webkit-margin-after: .357em;
+            margin-block-end: .357em;
+}
+
+.product-new-price {
+    color: var( --primary-darkCyan );
+}
+
+.product-old-price {
+    text-decoration: line-through;
+}
+
+.product-add-to-cart {
+    border-radius: var( --borderRadiusS );
+    padding: 1em;
+    color: var( --secondary-white );
+    background-color: var( --primary-darkCyan );
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: .714em;
+    inline-size: 100%;
+    -webkit-margin-before: .357em;
+            margin-block-start: .357em;
+    -webkit-transition: all ease .3s;
+    -o-transition: all ease .3s;
+    transition: all ease .3s;
+}
+
+.product-add-to-cart:hover {
+    background-color: var( --seocndary-darkerCyan );
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        padding: 2em 1.143em;
+    }
+
+    .product-card {
+        max-inline-size: 100%;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+    }
+
+    .product-featured-image {
+        max-inline-size: 100%;
+        aspect-ratio: 1.43 / 1;
+    }
+
+    .product-info {
+        padding: 1.786em;
+        gap: .714em 1.071em;
+    }
+
+    .product-title {
+        -webkit-margin-after: .357em;
+                margin-block-end: .357em;
+    }
+
+    .product-excerpt {
+        -webkit-margin-after: 1.071em;
+                margin-block-end: 1.071em;
+    }
+
+    .product-add-to-cart {
+        -webkit-margin-before: .357em;
+                margin-block-start: .357em;
+    }
+}
